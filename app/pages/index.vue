@@ -19,23 +19,10 @@ useHead({
     }
   ]
 })
-const { loggedIn } = useUserSession()
-const loginUri = ref('')
-const googleClientId = process.env.NUXT_OAUTH_GOOGLE_CLIENT_ID || ''
-onMounted(() => {
-  loginUri.value = location.origin + '/auth/google'
-  console.log('Login URI:', loginUri.value)
-})
 </script>
 
 <template>
   <div v-if="page">
-    <div
-      v-if="!loggedIn"
-      id="g_id_onload"
-      :data-client_id="googleClientId"
-      data-login_uri="http://localhost:3000/auth/google"
-    />
     <UPageHero
       :title="page.title"
       :description="page.description"
