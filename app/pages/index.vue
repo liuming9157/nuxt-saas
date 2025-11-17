@@ -20,7 +20,7 @@ useHead({
   ]
 })
 const { loggedIn } = useUserSession()
-const loginUri = process.env.NODE_ENV === 'production' ? 'https://' + location.host + '/auth/google' : 'http://localhost:3000/auth/google'
+const loginUri = location.origin + '/auth/google'
 const googleClientId = process.env.NUXT_OAUTH_GOOGLE_CLIENT_ID || ''
 </script>
 
