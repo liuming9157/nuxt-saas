@@ -1,0 +1,1 @@
+ALTER TABLE "email" RENAME COLUMN "name" TO "code";
