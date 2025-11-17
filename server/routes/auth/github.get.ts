@@ -57,7 +57,7 @@ export default defineOAuthGitHubEventHandler({
 
     await setUserSession(event, { user })
 
-    return sendRedirect(event, '/')
+    return sendRedirect(event, '/dashboard')
   },
   // Optional, will return a json error and 401 status code by default
   onError(event, error) {
